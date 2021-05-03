@@ -1,4 +1,4 @@
-import fs from 'fs';
+// import fs from 'fs';
 import { join } from 'path';
 
 import { exec } from '@actions/exec';
@@ -22,15 +22,15 @@ export const getRawCoverage = async (
     }
 
     // NOTE: The `npm ci` command is not used. Because if your version of npm is old, the generated `package-lock.json` will also be old, and the latest version of `npm ci` will fail.
-    fs.rmdirSync(joinPaths(workingDirectory, 'node_modules'), {
-        recursive: true,
-    });
+    // fs.rmdirSync(joinPaths(workingDirectory, 'node_modules'), {
+    //     recursive: true,
+    // });
 
-    await exec('npm i', undefined, {
-        cwd: workingDirectory,
-    });
+    // await exec('npm i', undefined, {
+    //     cwd: workingDirectory,
+    // });
 
-    let output = '';
+    // let output = '';
 
     try {
         await exec(testCommand, [], {
