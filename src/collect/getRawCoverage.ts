@@ -30,7 +30,7 @@ export const getRawCoverage = async (
     //     cwd: workingDirectory,
     // });
 
-    // let output = '';
+    let output = '';
 
     try {
         await exec(testCommand, [], {
